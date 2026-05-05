@@ -1,4 +1,4 @@
-# ✈️ TripCraft - Travel Planning Website
+#  TripCraft - Travel Planning Website
 
 A React-based travel planning website where users can search destinations, plan their budget, and build day-by-day itineraries.
 
@@ -10,17 +10,15 @@ Built with beginner-friendly JavaScript using React hooks, Context API, and Reac
 
 ---
 
-## 📋 Features
+##  Features
 
-### 🔍 Search Destinations
-- Browse 9 handpicked travel destinations
-- Search by destination name or country
+###  Search by destination name or country
 - Filter by category (City, Beach, Mountain)
 - Sort by name, price, or rating
 - Save favorite destinations
 - Add destinations directly to your itinerary
 
-### 💰 Budget Planner
+###  Budget Planner
 - Set your total travel budget
 - Add expenses with name, amount, and category
 - Visual progress bar shows spending percentage
