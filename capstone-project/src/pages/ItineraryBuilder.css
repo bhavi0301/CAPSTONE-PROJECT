@@ -1,0 +1,267 @@
+.itinerary-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.itinerary-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  position: sticky;
+  top: 100px;
+}
+
+.itinerary-form h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.itinerary-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.itinerary-form-fields label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: -10px;
+}
+
+.itinerary-form-fields select {
+  padding: 12px 16px;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.itinerary-form-fields textarea {
+  padding: 12px 16px;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.itinerary-form-fields textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+.itinerary-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.itinerary-timeline {
+  min-height: 300px;
+}
+
+.itinerary-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.itinerary-toolbar h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.day-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.day-tab {
+  padding: 10px 22px;
+  border-radius: var(--radius-xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.day-tab:hover {
+  border-color: var(--primary);
+  color: var(--text-primary);
+}
+
+.day-tab.active {
+  background: rgba(108, 99, 255, 0.2);
+  border-color: var(--primary);
+  color: var(--text-primary);
+}
+
+.day-tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(108, 99, 255, 0.3);
+  font-size: 0.75rem;
+  margin-left: 8px;
+}
+
+.timeline-list {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-glass);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -26px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--bg-dark);
+}
+
+.timeline-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.timeline-item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.timeline-item-time {
+  padding: 4px 12px;
+  background: rgba(108, 99, 255, 0.1);
+  border-radius: var(--radius-lg);
+  font-size: 0.8rem;
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+.timeline-item-dest {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.timeline-item-notes {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding: 10px 14px;
+  background: var(--bg-glass);
+  border-radius: var(--radius-sm);
+  margin-top: 10px;
+}
+
+.timeline-item-delete {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 107, 107, 0.1);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-item-delete {
+  opacity: 1;
+}
+
+.timeline-item-delete:hover {
+  background: rgba(255, 107, 107, 0.3);
+}
+
+.empty-itinerary {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+}
+
+.empty-itinerary span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.empty-itinerary h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.empty-itinerary p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .itinerary-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .itinerary-form {
+    position: static;
+  }
+
+  .itinerary-form-row {
+    grid-template-columns: 1fr;
+  }
+}
